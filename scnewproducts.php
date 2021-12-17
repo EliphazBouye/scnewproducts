@@ -86,7 +86,8 @@ class Scnewproducts extends Module implements WidgetInterface
             && $this->registerHook('deleteproduct')
             && $this->registerHook('categoryUpdate')
             && $this->registerHook('displayHome')
-            && $this->registerHook('actionAdminGroupsControllerSaveAfter');
+            && $this->registerHook('actionAdminGroupsControllerSaveAfter')
+            && $this->registerHook('actionFrontControllerSetMedia');
     }
 
     public function uninstall()
@@ -124,6 +125,21 @@ class Scnewproducts extends Module implements WidgetInterface
     public function _clearCache($template, $cache_id = null, $compile_id = null)
     {
         parent::_clearCache($this->templateFile);
+    }
+
+    public function hookActionFrontControllerSetMedia()
+    {
+        $this->context->controller->registerJavascript(
+            'modules-scnewproducts',
+            'modules/' . $this->name . '/views/js/front.js',
+            ['position' => 'bottom', 'priority' => 200]
+        );
+
+        $this->context->controller->registerStylesheet(
+            'modules-scnewproducts',
+            'modules/' . $this->name . '/views/css/front.css',
+            ['media' => 'all', 'priority' => 200]
+        );
     }
 
     /**

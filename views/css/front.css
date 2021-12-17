@@ -25,3 +25,17 @@
 * Don't forget to prefix your containers with your own identifier
 * to avoid any conflicts with others containers.
 */
+#controls-tiny-slider{
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 0;
+}
+
+section button#recule, button#avance{
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.tiny-slider .tns-item {
+}
