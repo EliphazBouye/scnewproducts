@@ -45,29 +45,25 @@
 <script>
     var slider = tns({
         container: '.tiny-slider',
-        items: 2,
-        "responsive": {
-            "350": {
-                "items": 2,
-                "controls": true,
-                "gutter": 90,
+        items: 1,
+        responsive: {
+            640: {
+                edgePadding: 20,
+                gutter: 20,
+                items: 2
             },
-            "900": {
-                "items": 3,
-                "gutter": 10,
+            700: {
+                gutter: 30
             },
-            "1200": {
-                "items": 4,
-                "gutter": 10,
-            },
+            900: {
+                items: 3
+            }
         },
-        "gutter": 10,
         "swipeAngle": false,
         autoplay: true,
         autoplayButtonOutput: false,
-        "nav": false, 
+        "nav": false,
         "prevButton": "#recule",
         "nextButton": "#avance",
-        "fixedWidth": 250,
     });
 </script>

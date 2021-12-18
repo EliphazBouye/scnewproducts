@@ -37,5 +37,7 @@ section button#recule, button#avance{
     border: none;
 }
 
-.tiny-slider .tns-item {
+article.product-miniature.js-product-miniature{
+    display: flex;
+    justify-content: center;
 }
