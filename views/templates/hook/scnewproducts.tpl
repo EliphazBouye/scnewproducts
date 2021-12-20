@@ -27,7 +27,7 @@
 
 
 <section>
-    <h1 class="text-center">{l s='New Products' d='Modules.Scnewproducts.Shop'}</h1>
+    <h1 class="text-center">{$title_new_products}</h1>
     <div id="controls-tiny-slider">
         <button id="recule"><img src="https://img.icons8.com/ios/50/000000/back.png" /></button>
         <button id="avance"><img src="https://img.icons8.com/ios/50/000000/forward.png" /></button>

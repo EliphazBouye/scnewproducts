@@ -169,7 +169,7 @@ class Scnewproducts extends Module implements WidgetInterface
                 $output = $this->displayError(implode('</br>', $errors));
             } else {
                 Configuration::updateValue('SCNEWPRODUCTS_HOME_NBR', (int) $nbr);
-                Configuration::updateValue('SCNEWPRODUCTS_HOME_TITLE', (int) $title);
+                Configuration::updateValue('SCNEWPRODUCTS_HOME_TITLE', $title);
 
                 $this->_clearCache('*');
 
@@ -290,6 +290,7 @@ class Scnewproducts extends Module implements WidgetInterface
         if (!empty($products)) {
             return array(
                 'products' => $products,
+                'title_new_products' => Configuration::get('SCNEWPRODUCTS_HOME_TITLE'),
             );
         }
 
